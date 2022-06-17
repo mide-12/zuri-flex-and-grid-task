@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--bg-sedan: hsl(31, 77%, 52%);
+	--bg-suv: hsl(184, 100%, 22%);
+	--bg-luxury: hsl(179, 100%, 13%);
+	--transparent-white: hsla(0, 0%, 100%, 0.75);
+	--light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+	font-family: 'Lexend Deca', sans-serif;
+	font-size: 15px;
+	background: #e0f2f2;
+	max-width: 1440px;
+	width: 100vw;
+	height: 100vh;
+}
+
+header {
+	padding: 20px 0;
+}
+
+header nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	list-style: none;
+	font-size: 25px;
+}
+
+header a {
+	text-decoration: none;
+	color: #e24748;
+}
+
+main {
+	width: 750px;
+	height: 500px;
+	display: flex;
+	margin: 40px auto;
+}
+
+.section-sedan {
+	background: var(--bg-sedan);
+	padding: 5%;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	flex: 1;
+}
+
+.section-suv {
+	background: var(--bg-suv);
+	padding:5%;
+	flex: 1;
+}
+
+.section-luxury {
+	background: var(--bg-luxury);
+	padding: 5%;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	flex: 1;
+}
+
+.title {
+	color: var(--light-gray);
+	text-transform: uppercase;
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 32px;
+	margin: 30px 0;
+}
+
+.paragraph {
+	color: var(--transparent-white);
+	line-height: 1.6;
+	margin-bottom: 100px;
+}
+
+.btn {
+	padding: 15px 25px;
+	background: var(--light-gray);
+	border-radius: 30px;
+	text-decoration: none;
+	font-size: 17px;
+	border: none;
+	text-align: center;
+}
+
+.btn:hover {
+	color: var(--light-gray);
+	background: transparent;
+	border: 2px solid var(--light-gray);
+	transition: 0.5s;
+}
+
+.btn-sedan {
+	color: var(--bg-sedan);
+}
+
+.btn-suv {
+	color: var(--bg-suv);
+}
+
+.btn-luxury {
+	color: var(--bg-luxury);
+}
+
+@media(max-width: 835px) {
+	main {
+		width: 60%;
+		height: 1300px;
+		flex-direction: column;
+	}
+
+	.section-sedan {
+		border-top-left-radius: 15px;
+		border-bottom-left-radius: 0px;
+		border-top-right-radius: 15px;
+		padding: 15% 10%;
+	}
+
+	.section-luxury {
+		border-top-right-radius: 0px;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		padding: 15% 10%;
+	}
+
+	.section-suv {
+		padding: 15% 10%;
+	}
+
+	.paragraph {
+		margin-bottom: 40px;
+	}
+}
+
+@media(max-width: 500px) {
+	main {
+		width: 80%;
+	}
+}
